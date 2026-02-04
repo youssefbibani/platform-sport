@@ -1,0 +1,348 @@
+.page {
+  --ink: var(--ink-900);
+  --muted: var(--ink-500);
+  --brand: var(--brand-600);
+  --accent: var(--accent-500);
+  --surface: var(--surface);
+  --border: var(--border);
+
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.main {
+  padding: 0 7vw 120px;
+  display: grid;
+  gap: 80px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  color: var(--brand);
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+.heroContent h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  margin: 12px 0 16px;
+}
+
+.heroCopy {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--brand), #2559ff 55%, var(--accent));
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(30, 94, 255, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(30, 94, 255, 0.3);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 22px;
+  border: 1px solid var(--border);
+  color: var(--ink);
+  background: #ffffff;
+  font-weight: 600;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.secondaryButton:hover {
+  border-color: #cdd6ea;
+  transform: translateY(-1px);
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.heroStat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.heroStat p {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.heroStat h3 {
+  margin-top: 6px;
+  font-size: 22px;
+}
+
+.heroMedia {
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage {
+  width: min(520px, 100%);
+  height: 340px;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  background: #dfe6f2;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.16);
+}
+
+.heroImageMedia {
+  object-fit: cover;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+}
+
+.filterRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #eef2ff;
+  padding: 8px;
+  border-radius: 999px;
+}
+
+.filterButton {
+  border: none;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.filterActive {
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.sectionCopy {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 6px;
+  max-width: 520px;
+}
+
+.upcoming {
+  display: grid;
+  gap: 24px;
+}
+
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.eventCard {
+  background: var(--surface);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.eventMedia {
+  position: relative;
+  height: 160px;
+  background: #10162a;
+}
+
+.eventImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.eventTag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(15, 23, 42, 0.7);
+  color: #ffffff;
+}
+
+.eventBody {
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.eventDate {
+  font-size: 12px;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.eventMeta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.spotlight {
+  display: grid;
+}
+
+.spotlightCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  padding: 32px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.1);
+}
+
+.bulletList {
+  margin: 16px 0 24px;
+  padding-left: 18px;
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+}
+
+.spotlightImage {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #eef2ff;
+}
+
+.spotlightImageMedia {
+  object-fit: cover;
+}
+
+.cta {
+  display: grid;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, #121a2b, #1e2b4e);
+  color: #ffffff;
+  border-radius: 28px;
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.2);
+}
+
+.ctaCard p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 8px;
+  max-width: 480px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 20px;
+  }
+
+  .ctaCard {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 0 6vw 90px;
+  }
+
+  .heroActions,
+  .ctaCard {
+    width: 100%;
+  }
+
+  .heroActions a,
+  .ctaCard a {
+    width: 100%;
+  }
+}
+
+.eventCard,
+.spotlightCard {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.eventCard:hover,
+.spotlightCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 50px rgba(15, 23, 42, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eventCard:hover,
+  .spotlightCard:hover {
+    transform: none;
+  }
+}

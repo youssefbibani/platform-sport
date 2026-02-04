@@ -1,0 +1,20 @@
+.pageTransition {
+  animation: pageIn 0.45s ease;
+}
+
+@keyframes pageIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageTransition {
+    animation: none;
+  }
+}
